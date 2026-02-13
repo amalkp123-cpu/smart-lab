@@ -1,0 +1,105 @@
+.features {
+  padding: 5rem 5%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  background: linear-gradient(
+    to bottom,
+    var(--grey-50),
+    var(--white)
+  );
+}
+
+.feature-box {
+  padding: 2.8rem 2rem;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    var(--white),
+    var(--grey-50)
+  );
+
+  border: 1px solid var(--grey-200);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+  transition: all .35s ease;
+}
+
+.feature-box h3 {
+  margin-bottom: .8rem;
+  font-size: 1.2rem;
+}
+
+.feature-box p {
+  color: var(--grey-800);
+  line-height: 1.6;
+}
+
+.feature-box:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+@media (max-width: 350px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 200px) {
+  .feature-box h3 {
+    font-size: .9rem;
+  }
+}
+.features {
+  padding: 5rem 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  background: linear-gradient(
+    to bottom,
+    var(--grey-50),
+    var(--white)
+  );
+}
+
+/* Card style stays same */
+
+.feature-box {
+  padding: 2.8rem 2rem;
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--white), var(--grey-50));
+  border: 1px solid var(--grey-200);
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  transition: .35s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ultra small screens (your 200px requirement) */
+@media (max-width: 200px) {
+  .feature-box {
+    padding: 1.4rem;
+  }
+}

@@ -1,0 +1,54 @@
+.footer {
+  padding: 3rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Alternate theme */
+  background: linear-gradient(
+    135deg,
+    var(--grey-800),
+    var(--black)
+  );
+
+  color: var(--grey-200);
+  border-top: none;
+}
+
+/* Text styling */
+
+.footer p {
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.status {
+  color: var(--white);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Soft glow accent */
+
+.status::before {
+  content: "●";
+  color: #10b981;
+  margin-right: 8px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 350px) {
+  .footer {
+    flex-direction: column;
+    gap: .8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 200px) {
+  .footer {
+    font-size: .65rem;
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,19 @@
+.motto-container {
+  margin-top: 2rem;
+  font-family: monospace;
+  font-size: .85rem;
+  letter-spacing: 3px;
+  color: var(--grey-400);
+  text-transform: uppercase;
+
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}

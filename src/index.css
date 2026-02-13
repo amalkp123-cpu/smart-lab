@@ -1,0 +1,126 @@
+/* ===============================
+   SMARTLAB DESIGN SYSTEM
+=============================== */
+
+:root {
+  --white: #ffffff;
+  --grey-50: #f9fafb;
+  --grey-200: #e5e7eb;
+  --grey-400: #9ca3af;
+  --grey-800: #1f2937;
+  --black: #000000;
+}
+
+/* ===== RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--grey-50)
+  );
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+/* ===== GLOBAL TEXT ===== */
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ===== GLOBAL BUTTON BEHAVIOR ===== */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ===== GLOBAL CONTAINER ===== */
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+/* ===== SCROLLBAR (Modern look) ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-800);
+}
+
+/* ===== UTILITY ===== */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .about-actions,
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .primary,
+  .secondary,
+  .nav-cta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 200px) {
+  body {
+    font-size: 12px;
+  }
+
+  .about-content,
+  .feature-box {
+    padding: 1.2rem;
+  }
+}
+input {
+  font-family: inherit;
+}
+

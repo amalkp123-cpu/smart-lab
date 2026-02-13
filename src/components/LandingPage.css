@@ -1,0 +1,139 @@
+:root {
+  --white: #ffffff;
+  --grey-50: #f9fafb;
+  --grey-200: #e5e7eb;
+  --grey-400: #9ca3af;
+  --grey-800: #1f2937;
+  --black: #000000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.perfect-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Responsive Dot Background */
+.dot-background {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(var(--grey-200) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: -1;
+}
+
+/* Navbar Stability */
+.navbar {
+  padding: 1.5rem 5%;
+  border-bottom: 1px solid var(--grey-200);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+
+/* Hero Content - Uses Flex to center without breaking */
+.hero {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero-content { max-width: 800px; width: 100%; text-align: center; }
+
+.system-tag { font-family: monospace; font-size: 0.7rem; color: var(--grey-400); letter-spacing: 3px; }
+
+h1 { font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 900; line-height: 1; margin: 2rem 0; }
+
+.text-outline { color: transparent; -webkit-text-stroke: 1px var(--black); }
+
+.hero-description { color: var(--grey-800); margin-bottom: 3rem; line-height: 1.6; max-width: 600px; margin-inline: auto; }
+
+/* Portal Buttons - Wrap-Safe */
+.portal-grid {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+.portal-btn {
+  padding: 1.2rem 2.5rem; border-radius: 4px; font-weight: 800;
+  cursor: pointer; min-width: 200px; border: 2px solid var(--black);
+  text-transform: uppercase; letter-spacing: 1px;
+}
+
+.black { background: var(--black); color: var(--white); }
+.white { background: var(--white); color: var(--black); }
+
+/* Features Grid - Unbreakable auto-fit */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  border-top: 1px solid var(--grey-200);
+}
+
+.feature-card {
+  padding: 3.5rem 2rem; border-right: 1px solid var(--grey-200);
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.feature-card:hover { background: var(--grey-50); }
+
+/* Footer Stability */
+.footer { padding: 2rem 5%; border-top: 1px solid var(--grey-200); font-size: 0.75rem; color: var(--grey-400); }
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+.status-badge { display: flex; align-items: center; gap: 8px; color: var(--black); font-weight: 700; }
+.dot { width: 6px; height: 6px; background: #10b981; border-radius: 50%; }
+
+/* --- 📱 RESPONSIVE (250px) --- */
+@media (max-width: 400px) {
+  .nav-links { display: none; }
+  h1 { font-size: 1.7rem; }
+  .portal-btn { width: 100%; }
+}
+.nav-cta-pill {
+  /* Theme Colors */
+  background-color: #000000; /* Solid Black */
+  color: #ffffff;            /* Pure White Text */
+  
+  /* Shape & Sizing */
+  padding: 10px 28px;
+  border-radius: 50px;       /* Forces the pill shape */
+  border: none;
+  
+  /* Typography */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  
+  /* Layout & Interaction */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;       /* Prevents text wrapping inside button */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-cta-pill:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure it stays readable on tiny screens (250px) */
+@media (max-width: 300px) {
+  .nav-cta-pill {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+}

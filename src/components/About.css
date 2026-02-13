@@ -1,0 +1,93 @@
+.about {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at top, var(--grey-200), transparent 55%),
+    linear-gradient(to bottom, var(--white), var(--grey-50));
+}
+
+.about-content {
+  max-width: 900px;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+
+}
+
+.about-tag {
+  font-size: .75rem;
+  letter-spacing: 3px;
+  color: var(--grey-400);
+  font-weight: 700;
+}
+
+.about h1 {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  margin: 1.6rem 0;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--black);
+}
+
+.about p {
+  color: var(--grey-800);
+  margin-bottom: 1.4rem;
+  line-height: 1.7;
+}
+
+.about-actions {
+  margin-top: 2.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.primary {
+  background: linear-gradient(
+    135deg,
+    var(--black),
+    var(--grey-800)
+  );
+  color: var(--white);
+  padding: 1rem 2.6rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+}
+
+.secondary {
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 1rem 2.6rem;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.about-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .about h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 200px) {
+  .about p {
+    font-size: .75rem;
+  }
+}
+
